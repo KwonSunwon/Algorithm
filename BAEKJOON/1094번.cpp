@@ -1,4 +1,4 @@
-//1094��
+//1094번 막대기
 //https://www.acmicpc.net/problem/1094
 
 #include <iostream>
