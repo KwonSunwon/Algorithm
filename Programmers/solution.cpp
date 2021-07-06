@@ -9,26 +9,39 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     vector<int> answer;
 
     while(!progresses.empty()){
+        
+        if(progresses.begin() == progresses.end()){
+                answer.push_back(1);
+                break;
+            }
+        
         for(int i = 0; i < progresses.size(); ++i){
             progresses[i] += speeds[i];
         }
 
         if(progresses.front() >= 100){
+            
             while( progresses[cnt] >= 100){
                 ++cnt;
             }
-            if(cnt = 1){
+            
+            if(progresses.begin() + cnt - 1 == progresses.end())
+                --cnt;
+
+            if(cnt == 1){
                 progresses.erase(progresses.begin());
                 speeds.erase(speeds.begin());
             }
             else{
-                progresses.erase(progresses.begin(), progresses.begin() + cnt - 1 );
-                speeds.erase(speeds.begin(), speeds.begin() + cnt - 1);
+                progresses.erase(progresses.begin(), progresses.begin() + cnt);
+                speeds.erase(speeds.begin(), speeds.begin() + cnt);
             }
             answer.push_back(cnt);
+            
             cnt = 0;
         }
     }
+    
     return answer;
 }
 
