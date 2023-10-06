@@ -1,0 +1,20 @@
+# vscode
+.vscode/
+
+# C++ compiled output
+*.out
+
+# Object files
+*.o
+
+# Precompiled Headers
+*.gch
+
+# Libraries
+*.lib
+*.a
+*.dll
+
+# Executables
+*.exe
+*.run
