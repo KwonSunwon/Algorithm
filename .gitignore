@@ -18,3 +18,5 @@
 # Executables
 *.exe
 *.run
+
+exe_eraser.py
